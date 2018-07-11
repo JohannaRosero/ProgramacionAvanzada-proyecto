@@ -41,20 +41,20 @@
                     <div class="ribbon"></div>
                     <h3>Avengers</h3>
                     <p><img src="img/Cine/avengers.jpg" alt="MDN" width="250" height="200" ></p>
-                   <a class="" >Asientos</a>
+					<button id="btn1" onclick="ventana(1)" value=1>Comprar</button>				
                 </div> 
                 <div class="asiento" data-stellar-ratio="1.5" data-stellar-vertical-offset="1450">
                     <div class="ribbon"></div>
                     <h3>Pantera Negra</h3>
                     
                     <p><img src="img/Cine/pantera.jpg" alt="MDN" width="250" height="200"  ></p>
-                    <a class="" >Asientos</a>
+                    <button id="btn2" onclick="location.href='http://localhost:3000'" value=2>Comprar</button>
                 </div> 
                 <div class="asiento" data-stellar-ratio="3" data-stellar-vertical-offset="-550">
                     <div class="ribbon"></div>
                     <h3>Thor</h3>
                       <p><img src="img/Cine/thor.jpg" alt="MDN" width="250" height="200"  ></p>
-                    <a class="" >Asientos</a>
+                    <button id="btn3" onclick="location.href='http://localhost:3000'" value=3>Comprar</button>
                 </div> 
             </div>
              <div class="marginTop">
@@ -62,12 +62,18 @@
                     <div class="ribbon"></div>
                     <h3>Soy leyenda</h3>
                       <p><img src="img/Cine/Soy_leyenda.jpg" alt="MDN" width="250" height="200"  ></p>
-                    <a class="" >Asientos</a>
+                    <button id="btn4" onclick="location.href='http://localhost:3000'" value=4>Comprar</button>
                 </div> 
             </div>
 
         </section>
-        
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.0/socket.io.js"></script>
+<script language=javascript>
+function ventana(url){
+window.open("http://localhost:3000", "nombre de la ventana", "width=800, height=500")
+}       
+ </script>      
        
     </body>
 </html>
