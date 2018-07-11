@@ -1,24 +1,21 @@
-
-    var express= require('express'),//estas son las librerias o instancias que usamos
-    aplicacion = express(),//es una libreria para crear este es x cada servidor vedad si lo unico q cmabia es el puerto de escicha 
+    var express= require('express'),
+    aplicacion = express(),
     server = require('http').createServer(aplicacion),
     io = require('socket.io').listen(server);
-	console.log("jugada1");
 	var colores = new Array(36);
 	for (var i = 1; i < 37; i++) {
-		colores[i]=0;
-			   
+		colores[i]=0;			   
 	}
-
-    server.listen(3000);
-
+    server.listen(3001);
+    //renderizar
     aplicacion.get("/",function(req,res){
-        res.sendFile(__dirname+'/juego.html'); 
+        res.sendFile(__dirname+'/juego.html');
     });
 
-   console.log("esperando conexion"); 
+
+ //se recoge el dato que se encuentra en el sockets y se envía a los demás
    io.sockets.on('connection',function(socket){
-            console.log("conexion Establecida");   
+            console.log("conexion Establecida");           
      
  socket.on('jugada',function(dataS){
 		colores[dataS.id2]=1;
